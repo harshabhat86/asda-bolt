@@ -1,8 +1,8 @@
 import React from 'react';
 import { hot } from 'react-hot-loader';
 import 'assets/scss/App.scss';
-import AboutPage from 'components/AboutPage';
-import WelcomePage from 'components/WelcomePage';
+// import AboutPage from './AboutPage';
+import WelcomePage from './WelcomePage';
 import { BrowserRouter, Route, Link } from 'react-router-dom';
 
 class App extends React.PureComponent {
@@ -10,12 +10,12 @@ class App extends React.PureComponent {
     return (
       <BrowserRouter>
         <div className="app">
-          <nav>
-            <Link to="/">Home</Link> | <Link to="/about">About</Link>
-          </nav>
+          {/* <nav>
+            <Link to="/">Homef</Link> | <Link to="/about">About</Link>
+          </nav> */}
           <hr />
           <Route exact path="/" component={WelcomePage} />
-          <Route path="/about" component={AboutPage} />
+          {/* <Route path="/about" component={AboutPage} /> */}
         </div>
       </BrowserRouter>
     );
