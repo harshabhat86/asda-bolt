@@ -1,14 +1,19 @@
 import React from 'react';
 import 'assets/scss/App.scss';
-import reactLogo from 'assets/img/react_logo.svg';
+import BookSlot from './BookSlot.jsx'
+import Logo from './Logo.jsx'
+import HomeSeachInput from './HomeSearchInput.jsx'
+import InspireButton from './InspireButton.jsx'
 
 class WelcomePage extends React.PureComponent {
   render() {
     return (
-      <div>
-        <h1>Hello World!</h1>
-        <p>Foo to the bar</p>
-        <img src={reactLogo} height="480" />
+      <div className="container">
+        <BookSlot />
+        <Logo />
+        <HomeSeachInput />
+        <span className="home__or">or</span>
+        <InspireButton />
       </div>
     );
   }

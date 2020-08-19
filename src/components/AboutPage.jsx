@@ -12,4 +12,4 @@ class AboutPage extends React.PureComponent {
   }
 }
 
-export default AboutPage;
+export default AboutPage
