@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="69" height="52" viewBox="0 0 69 52">
+    <defs>
+        <filter id="bud0hlc5ta" width="116%" height="109.4%" x="-8%" y="-4.7%" filterUnits="objectBoundingBox">
+            <feOffset in="SourceAlpha" result="shadowOffsetOuter1"/>
+            <feGaussianBlur in="shadowOffsetOuter1" result="shadowBlurOuter1" stdDeviation="10"/>
+            <feColorMatrix in="shadowBlurOuter1" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.1 0"/>
+        </filter>
+        <filter id="jv2hs6o8kc" width="116%" height="176.9%" x="-8%" y="-38.5%" filterUnits="objectBoundingBox">
+            <feOffset in="SourceAlpha" result="shadowOffsetOuter1"/>
+            <feGaussianBlur in="shadowOffsetOuter1" result="shadowBlurOuter1" stdDeviation="10"/>
+            <feColorMatrix in="shadowBlurOuter1" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.1 0"/>
+        </filter>
+        <rect id="e0qztj5xib" width="375" height="639" x="0" y="111" rx="12"/>
+        <path id="fa4m8mr40d" d="M12 0h351c6.627 0 12 5.373 12 12v66H0V12C0 5.373 5.373 0 12 0z"/>
+    </defs>
+    <g fill="none" fill-rule="evenodd" transform="translate(-8 -684)">
+        <use fill="#000" filter="url(#bud0hlc5ta)" xlink:href="#e0qztj5xib"/>
+        <use fill="#FFF" xlink:href="#e0qztj5xib"/>
+        <g transform="translate(0 672)">
+            <use fill="#000" filter="url(#jv2hs6o8kc)" xlink:href="#fa4m8mr40d"/>
+            <use fill="#FFF" xlink:href="#fa4m8mr40d"/>
+            <g>
+                <g fill="#FFD300" transform="translate(8 12)">
+                    <circle cx="58.5" cy="11.5" r="2.5"/>
+                    <circle cx="13" cy="8" r="2"/>
+                    <circle cx="2" cy="23" r="2"/>
+                    <circle cx="67.5" cy="15.5" r="1.5"/>
+                    <circle cx="66" cy="35" r="2"/>
+                    <circle cx="5" cy="39" r="1"/>
+                    <circle cx="16" cy="15" r="1"/>
+                    <circle cx="32" cy="6" r="1"/>
+                    <circle cx="49" cy="1" r="1"/>
+                    <circle cx="21" cy="1" r="1"/>
+                </g>
+                <g transform="translate(8 12) translate(4 11)">
+                    <path stroke="#757574" stroke-width="4" d="M25 9c.833-6 4.167-9 10-9s9.167 3 10 9"/>
+                    <path stroke="#444652" stroke-width="4" d="M17 9c.833-6 4.167-9 10-9s9.167 3 10 9"/>
+                    <path fill="#68A51C" d="M10 7L32 7 43 7 54 7 49.769 40 43 40 32 40 14.231 40z"/>
+                    <rect width="8" height="1" y="40" fill="#FFD300" rx=".5"/>
+                    <rect width="2" height="1" x="56" y="40" fill="#FFD300" rx=".5"/>
+                    <rect width="3" height="1" x="61" y="40" fill="#FFD300" rx=".5"/>
+                    <rect width="42" height="1" x="11" y="40" fill="#FFD300" rx=".5"/>
+                    <path fill="#FFF" d="M0 0H19V6H0z" transform="translate(15 18)"/>
+                    <path fill="#508016" d="M39 40L39 7 54 7 49.833 40z"/>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

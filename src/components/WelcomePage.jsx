@@ -1,17 +1,17 @@
 import React from 'react';
 import 'assets/scss/App.scss';
-import BookSlot from './BookSlot.jsx'
-import Logo from './Logo.jsx'
-import HomeSeachInput from './HomeSearchInput.jsx'
-import InspireButton from './InspireButton.jsx'
+import Logo from './Logo'
+import HomeSeachInput from './HomeSearchInput'
+import InspireButton from './InspireButton'
 
 class WelcomePage extends React.PureComponent {
   render() {
+    const { handleInputFocus } = this.props
+
     return (
       <div className="container">
-        <BookSlot />
         <Logo />
-        <HomeSeachInput />
+        <HomeSeachInput handleInputFocus={handleInputFocus} />
         <span className="home__or">or</span>
         <InspireButton />
       </div>

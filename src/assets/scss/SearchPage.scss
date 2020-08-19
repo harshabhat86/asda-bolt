@@ -1,0 +1,12 @@
+.search {
+  &__container {
+    display: flex;
+  }
+
+  &__back-button {
+    width: 24px;
+    height: 24px;
+    object-fit: contain;
+    transform: rotate(45deg);
+  }
+}

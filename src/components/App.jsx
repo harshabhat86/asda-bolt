@@ -3,19 +3,33 @@ import { hot } from 'react-hot-loader';
 import 'assets/scss/App.scss';
 // import AboutPage from './AboutPage';
 import WelcomePage from './WelcomePage';
-import { BrowserRouter, Route, Link } from 'react-router-dom';
+import { BrowserRouter } from 'react-router-dom';
+import BookSlot from './BookSlot'
+import Trolley from './Trolley'
+import SearchPage from './SearchPage'
 
 class App extends React.PureComponent {
+  constructor() {
+    super()
+    this.state = {
+      isFocused: false,
+    }
+  }
+
+  handleInputFocus = () => {
+    this.setState({ isFocused: true })
+  }
+
   render() {
+    const { isFocused } = this.state
+
     return (
       <BrowserRouter>
         <div className="app">
-          {/* <nav>
-            <Link to="/">Homef</Link> | <Link to="/about">About</Link>
-          </nav> */}
-          <hr />
-          <Route exact path="/" component={WelcomePage} />
-          {/* <Route path="/about" component={AboutPage} /> */}
+          {!isFocused && <BookSlot />}
+          {!isFocused && <WelcomePage handleInputFocus={this.handleInputFocus} />}
+          {isFocused && <SearchPage />}
+          <Trolley />
         </div>
       </BrowserRouter>
     );
