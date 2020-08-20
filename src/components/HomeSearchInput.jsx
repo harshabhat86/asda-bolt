@@ -8,18 +8,37 @@ class HomeSearchInput extends React.Component {
     this.textInput = React.createRef();
   }
 
-  componentDidMount() {
-    const { isFocused } = this.props
-    if (isFocused) {
-      this.textInput.current.focus();
+  componentDidUpdate (prevProps) {
+    if (prevProps.isFocused === false && this.props.isFocused === true) {
+      this.textInput.current.focus()
+      console.log('hello')
     }
   }
 
+  handleClickOutside = () => {
+    const { handleUnfocus } = this.props
+    if (this.textInput.current && !this.textInput.current.contains(event.target)) {
+      handleUnfocus()
+    }
+  }
+
+  componentDidMount() {
+    const { isFocused } = this.props
+    if (isFocused) {
+      this.textInput.current.focus()
+    }
+    document.addEventListener('mousedown', this.handleClickOutside);
+  }
+
+  componentWillUnmount() {
+    document.removeEventListener('mousedown', this.handleClickOutside);
+  }
+
   render() {
-    const { handleInputClick, isFocused, inputText, handleChange } = this.props
+    const { handleInputClick, isFocused, inputText, handleChange, isSelectedTagsEmpty } = this.props
     return (
-      <div className="input__container">
-        <img className="input__camera" src={camera} />
+      <div className={`input__container ${isFocused && !isSelectedTagsEmpty ? 'inline' : ''}`}>
+        {isSelectedTagsEmpty && !inputText && <img className="input__camera" src={camera} />}
         {!isFocused && <img className="input__search" src={search} />}
         <input
           className="input__main"

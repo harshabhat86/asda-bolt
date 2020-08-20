@@ -10,7 +10,7 @@ const Trolley = () => (
     <img src={trolley} />
     <div className="trolley__text">
       <span className="trolley__top-text">Ohh... it's empty</span>
-      <span className="trolley__bottom-text">Get stated here</span>
+      <span className="trolley__bottom-text">Get started here</span>
     </div>
     <div className="trolley__buttons">
       <img src={one} />

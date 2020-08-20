@@ -9,8 +9,12 @@
     height: 24px;
     object-fit: contain;
     transform: rotate(45deg);
+    margin-left: 18px;
   }
 
+  &__query {
+    width: 100%;
+  }
 
   &__middle {
     font-size: 16px;

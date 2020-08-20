@@ -1,8 +1,8 @@
-.pill {
+.tags {
   &__container {
     display: flex;
     flex-wrap: wrap;
-    margin: 24px 16px 24px 16px;
+    width: 100%;
   }
 
   &__text {
@@ -17,11 +17,12 @@
     color: #3d3d3d;
     padding: 2px 8px 2px 8px;
     margin: 4px 4px 4px 4px;
-    background-color: #ffffff;
+    background-color: #eeeeee;
+    display: flex;
+    align-items: center;
+  }
 
-    &.secondary {
-      background-color: #eeeeee;
-      border: none;
-    }
+  &__close {
+    margin: 0px 8px 0 8px;
   }
 }

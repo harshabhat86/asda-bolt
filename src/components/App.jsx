@@ -12,27 +12,27 @@ class App extends React.PureComponent {
   constructor(props) {
     super(props)
     this.state = {
-      isFocused: false,
+      isSearchMode: false,
     }
   }
 
   handleInputClick = () => {
-    this.setState({ isFocused: true })
+    this.setState({ isSearchMode: true })
   }
 
   handleBack = () => {
-    this.setState({ isFocused: false })
+    this.setState({ isSearchMode: false })
   }
 
   render() {
-    const { isFocused } = this.state
+    const { isSearchMode } = this.state
 
     return (
       <BrowserRouter>
         <div className="app">
-          {!isFocused && <BookSlot />}
-          {!isFocused && <WelcomePage handleInputClick={this.handleInputClick} />}
-          {isFocused && <SearchPage handleBack={this.handleBack} />}
+          {!isSearchMode && <BookSlot />}
+          {!isSearchMode && <WelcomePage handleInputClick={this.handleInputClick} />}
+          {isSearchMode && <SearchPage handleBack={this.handleBack} />}
           <Trolley />
         </div>
       </BrowserRouter>
