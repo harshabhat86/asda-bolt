@@ -84,6 +84,13 @@ div {
       letter-spacing: 0.2px;
       color: #767676;
     }
+    &:focus {
+      border: none;
+      text-align: left;
+      &::placeholder {
+        color: transparent;
+      }
+    }
   }
 }
 

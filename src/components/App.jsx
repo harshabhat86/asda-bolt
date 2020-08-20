@@ -9,15 +9,19 @@ import Trolley from './Trolley'
 import SearchPage from './SearchPage'
 
 class App extends React.PureComponent {
-  constructor() {
-    super()
+  constructor(props) {
+    super(props)
     this.state = {
       isFocused: false,
     }
   }
 
-  handleInputFocus = () => {
+  handleInputClick = () => {
     this.setState({ isFocused: true })
+  }
+
+  handleBack = () => {
+    this.setState({ isFocused: false })
   }
 
   render() {
@@ -27,8 +31,8 @@ class App extends React.PureComponent {
       <BrowserRouter>
         <div className="app">
           {!isFocused && <BookSlot />}
-          {!isFocused && <WelcomePage handleInputFocus={this.handleInputFocus} />}
-          {isFocused && <SearchPage />}
+          {!isFocused && <WelcomePage handleInputClick={this.handleInputClick} />}
+          {isFocused && <SearchPage handleBack={this.handleBack} />}
           <Trolley />
         </div>
       </BrowserRouter>

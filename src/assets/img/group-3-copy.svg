@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="48" height="48" viewBox="0 0 48 48">
+    <defs>
+        <filter id="nobfttfm6b" width="116%" height="109.4%" x="-8%" y="-4.7%" filterUnits="objectBoundingBox">
+            <feOffset in="SourceAlpha" result="shadowOffsetOuter1"/>
+            <feGaussianBlur in="shadowOffsetOuter1" result="shadowBlurOuter1" stdDeviation="10"/>
+            <feColorMatrix in="shadowBlurOuter1" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.1 0"/>
+        </filter>
+        <filter id="2k3qqmdv4d" width="116%" height="176.9%" x="-8%" y="-38.5%" filterUnits="objectBoundingBox">
+            <feOffset in="SourceAlpha" result="shadowOffsetOuter1"/>
+            <feGaussianBlur in="shadowOffsetOuter1" result="shadowBlurOuter1" stdDeviation="10"/>
+            <feColorMatrix in="shadowBlurOuter1" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.1 0"/>
+        </filter>
+        <rect id="sxoqsz7s5c" width="375" height="639" x="0" y="111" rx="12"/>
+        <rect id="tip0j02mda" width="48" height="48" x="0" y="0" rx="4"/>
+        <path id="14qe05x6pe" d="M12 0h351c6.627 0 12 5.373 12 12v66H0V12C0 5.373 5.373 0 12 0z"/>
+        <mask id="ub0sqli33f" width="48" height="48" x="0" y="0" fill="#fff" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox">
+            <use xlink:href="#tip0j02mda"/>
+        </mask>
+    </defs>
+    <g fill="none" fill-rule="evenodd" transform="translate(-343 -688)">
+        <use fill="#000" filter="url(#nobfttfm6b)" xlink:href="#sxoqsz7s5c"/>
+        <use fill="#FFF" xlink:href="#sxoqsz7s5c"/>
+        <g transform="translate(0 672)">
+            <use fill="#000" filter="url(#2k3qqmdv4d)" xlink:href="#14qe05x6pe"/>
+            <use fill="#FFF" xlink:href="#14qe05x6pe"/>
+            <g>
+                <g transform="translate(215 16) translate(128)">
+                    <use stroke="#CCC" stroke-dasharray="2" stroke-width="2" mask="url(#ub0sqli33f)" xlink:href="#tip0j02mda"/>
+                    <path fill="#949494" d="M30 10.375v4.875c0 2.296-1.29 4.291-3.184 5.3-.242.128-.573.255-.993.38-.636.19-1.072.774-1.072 1.438v3.007c0 .585.445 1.065 1.016 1.12l.108.005h.75c.207 0 .375.168.375.375v.75c0 .207-.168.375-.375.375h-5.25c-.207 0-.375-.168-.375-.375v-.75c0-.207.168-.375.375-.375h.75c.621 0 1.125-.504 1.125-1.125v-3.024c0-.658-.428-1.239-1.057-1.433-.58-.18-1.024-.364-1.332-.554-1.667-1.025-2.794-2.842-2.858-4.927L18 15.25v-4.875c0-.207.168-.375.375-.375h11.25c.207 0 .375.168.375.375zm-8.625 4.875c-.683 0-1.284.215-1.826.661.32 2.176 2.195 3.839 4.451 3.839 1.66 0 3.11-.9 3.89-2.237-.538.24-1.084.362-1.64.362-1.063 0-1.788-.31-2.364-.886l-.155-.166-.55-.607-.153-.163c-.075-.079-.143-.148-.19-.19-.435-.4-.89-.613-1.463-.613zM28.5 11.5h-9v2.671c.577-.28 1.205-.421 1.875-.421.99 0 1.787.372 2.478 1.008l.104.1.246.253.744.817c.3.3.644.447 1.303.447.713 0 1.46-.343 2.249-1.068l.001-.057V11.5z"/>
+                    <text fill="#949494" font-family="SourceSansPro-SemiBold, Source Sans Pro" font-size="10" font-weight="500" letter-spacing=".083">
+                        <tspan x="9.8" y="41">+ wine</tspan>
+                    </text>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -6,12 +6,12 @@ import InspireButton from './InspireButton'
 
 class WelcomePage extends React.PureComponent {
   render() {
-    const { handleInputFocus } = this.props
+    const { handleInputClick } = this.props
 
     return (
       <div className="container">
         <Logo />
-        <HomeSeachInput handleInputFocus={handleInputFocus} />
+        <HomeSeachInput handleInputClick={handleInputClick} />
         <span className="home__or">or</span>
         <InspireButton />
       </div>

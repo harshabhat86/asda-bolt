@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="48" height="48" viewBox="0 0 48 48">
+    <defs>
+        <filter id="jwe1p3onvb" width="116%" height="109.4%" x="-8%" y="-4.7%" filterUnits="objectBoundingBox">
+            <feOffset in="SourceAlpha" result="shadowOffsetOuter1"/>
+            <feGaussianBlur in="shadowOffsetOuter1" result="shadowBlurOuter1" stdDeviation="10"/>
+            <feColorMatrix in="shadowBlurOuter1" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.1 0"/>
+        </filter>
+        <filter id="hm1k2d2wjd" width="116%" height="176.9%" x="-8%" y="-38.5%" filterUnits="objectBoundingBox">
+            <feOffset in="SourceAlpha" result="shadowOffsetOuter1"/>
+            <feGaussianBlur in="shadowOffsetOuter1" result="shadowBlurOuter1" stdDeviation="10"/>
+            <feColorMatrix in="shadowBlurOuter1" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.1 0"/>
+        </filter>
+        <rect id="ncd33sxp1c" width="375" height="639" x="0" y="111" rx="12"/>
+        <rect id="pf3l2m2eza" width="48" height="48" x="0" y="0" rx="4"/>
+        <path id="9mgg5c783e" d="M12 0h351c6.627 0 12 5.373 12 12v66H0V12C0 5.373 5.373 0 12 0z"/>
+        <path id="jwjojgwmkg" d="M8.25 0c2.255 0 4.413.415 6.402 1.172l.166.065c.769.309 1.141 1.182.833 1.95-.016.039-.032.076-.05.112L8.584 17.33c-.092.185-.317.26-.503.168-.072-.036-.131-.095-.167-.168L.9 3.3c-.37-.74-.07-1.641.67-2.012.036-.017.073-.034.11-.049l.225-.088C3.878.407 6.017 0 8.25 0zm0 4.5c-1.323 0-2.624.155-3.883.46-.072.016-.157.038-.255.064-.267.07-.426.344-.356.611.01.033.021.065.037.096l.91 1.819c.177-.033.36-.05.547-.05 1.657 0 3 1.343 3 3 0 .873-.373 1.66-.968 2.207l.968 1.939 1.03-2.061C9.11 12.447 9 12.236 9 12c0-.414.336-.75.75-.75.064 0 .126.008.186.023l.792-1.584C9.738 9.454 9 8.563 9 7.5c0-1.243 1.007-2.25 2.25-2.25.547 0 1.048.195 1.438.52l.02-.04c.123-.246.023-.547-.224-.67-.03-.015-.063-.028-.096-.036l-.203-.052C10.91 4.66 9.59 4.5 8.25 4.5zM5.433 9.011l1.118 2.236c.127-.22.199-.475.199-.747 0-.766-.575-1.399-1.317-1.489zM11.25 6.75c-.414 0-.75.336-.75.75s.336.75.75.75c.074 0 .146-.01.214-.03l.49-.98c-.106-.286-.381-.49-.704-.49zm-4.5-1.5c.414 0 .75.336.75.75s-.336.75-.75.75S6 6.414 6 6s.336-.75.75-.75zm1.5-3.75c-1.702 0-3.367.257-4.955.756-.138.044-.357.12-.657.228-.195.07-.296.285-.226.48.005.013.01.027.017.04l.224.448c.108.216.355.324.587.257.22-.064.397-.113.532-.148C5.204 3.195 6.704 3 8.25 3c1.497 0 2.951.183 4.341.527.168.041.39.102.67.183.231.067.478-.041.585-.257l.226-.45c.092-.186.017-.411-.168-.504l-.04-.017c-.187-.068-.328-.118-.422-.149-1.658-.55-3.405-.833-5.192-.833z"/>
+        <mask id="fy1yd8rntf" width="48" height="48" x="0" y="0" fill="#fff" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox">
+            <use xlink:href="#pf3l2m2eza"/>
+        </mask>
+    </defs>
+    <g fill="none" fill-rule="evenodd" transform="translate(-215 -688)">
+        <use fill="#000" filter="url(#jwe1p3onvb)" xlink:href="#ncd33sxp1c"/>
+        <use fill="#FFF" xlink:href="#ncd33sxp1c"/>
+        <g transform="translate(0 672)">
+            <use fill="#000" filter="url(#hm1k2d2wjd)" xlink:href="#9mgg5c783e"/>
+            <use fill="#FFF" xlink:href="#9mgg5c783e"/>
+            <g transform="translate(215 16)">
+                <use stroke="#CCC" stroke-dasharray="2" stroke-width="2" mask="url(#fy1yd8rntf)" xlink:href="#pf3l2m2eza"/>
+                <g transform="translate(15.75 10.5)">
+                    <mask id="9s4l9cgkih" fill="#fff">
+                        <use xlink:href="#jwjojgwmkg"/>
+                    </mask>
+                    <use fill="#3D3D3D" fill-rule="nonzero" xlink:href="#jwjojgwmkg"/>
+                    <g fill="#949494" mask="url(#9s4l9cgkih)">
+                        <path d="M0 0H24V24H0z" transform="translate(-3.75 -3)"/>
+                    </g>
+                </g>
+                <text fill="#949494" font-family="SourceSansPro-SemiBold, Source Sans Pro" font-size="10" font-weight="500" letter-spacing=".083">
+                    <tspan x="9.093" y="41">+ pizza</tspan>
+                </text>
+            </g>
+        </g>
+    </g>
+</svg>
