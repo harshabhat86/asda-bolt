@@ -40,7 +40,7 @@ class SearchPage extends React.Component {
     const { inputText, tags } = this.state
     return tags.sort((a, b) => b.indexOf(inputText) - a.indexOf(inputText)).slice(0, 8)
   }
-  
+
   addTag = (text) => {
     const { selectedTags, tags } = this.state
     if (selectedTags.indexOf(text) === -1) {
@@ -77,8 +77,8 @@ class SearchPage extends React.Component {
           <span>Add another search</span>
         </div>
         <div className="search__results" >
-          <div className="search_regulars">
-            Your regulars
+          Your regulars
+          <div className="search__regulars">
             {
               yourRegulars.map(item => (
                 <ProductModule
