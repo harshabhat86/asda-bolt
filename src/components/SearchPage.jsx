@@ -2,9 +2,11 @@ import React from 'react'
 import HomeSeachInput from './HomeSearchInput'
 import PillContainer from './PillContainer'
 import SelectedTags from './SelectedTags'
+import ProductModule from './ProductModule'
 import left from 'assets/img/left.svg'
 import 'assets/scss/SearchPage.scss';
 
+import { yourRegulars } from '../data/yourRegulars'
 
 class SearchPage extends React.Component {
   constructor(props) {
@@ -53,7 +55,6 @@ class SearchPage extends React.Component {
   render() {
     const { isFocused, inputText, selectedTags } = this.state
     const { handleBack } = this.props
-
     return (
       <div  className="search__container" >
         <div className="search__top" >
@@ -78,6 +79,16 @@ class SearchPage extends React.Component {
         <div className="search__results" >
           <div className="search_regulars">
             Your regulars
+            {
+              yourRegulars.map(item => (
+                <ProductModule
+                  image={item.image}
+                  title={item.title}
+                  price={item.price}
+                  pricePerUom={item.pricePerUom}
+                />
+              ))
+            }
           </div>
         </div>
       </div>
