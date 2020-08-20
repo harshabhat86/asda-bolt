@@ -1,6 +1,7 @@
 .search {
-  &__container {
+  &__top {
     display: flex;
+    align-items: center;
   }
 
   &__back-button {
@@ -8,5 +9,36 @@
     height: 24px;
     object-fit: contain;
     transform: rotate(45deg);
+  }
+
+
+  &__middle {
+    font-size: 16px;
+    font-weight: 600;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.25;
+    letter-spacing: 0.2px;
+    color: #0073b1;
+    border-top: 1px solid #eeeeee;
+    margin: 0 24px 0 24px;
+    padding: 16px 0 16px 0;
+  }
+
+  &__results {
+    border-top: 1px solid #eeeeee;
+    margin: 0 24px 0 24px;
+    padding: 16px 0 16px 0;
+  }
+
+  &__regulars {
+    width: 100%;
+    font-size: 16px;
+    font-weight: 600;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.25;
+    letter-spacing: 0.2px;
+    color: #3d3d3d;
   }
 }

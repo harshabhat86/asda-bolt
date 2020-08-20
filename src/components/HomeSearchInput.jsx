@@ -16,7 +16,7 @@ class HomeSearchInput extends React.Component {
   }
 
   render() {
-    const { handleInputClick, isFocused } = this.props
+    const { handleInputClick, isFocused, inputText, handleChange } = this.props
     return (
       <div className="input__container">
         <img className="input__camera" src={camera} />
@@ -27,6 +27,8 @@ class HomeSearchInput extends React.Component {
           placeholder="Search for items, recipes, offers.."
           onClick={handleInputClick}
           ref={this.textInput}
+          value={inputText}
+          onChange={handleChange}
         />
       </div>
     )

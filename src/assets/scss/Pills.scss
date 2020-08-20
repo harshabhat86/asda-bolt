@@ -1,0 +1,27 @@
+.pill {
+  &__container {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 16px 0 16px;
+  }
+
+  &__text {
+    height: 24px;
+    border-radius: 16px;
+    border: solid 1px #cccccc;
+    font-size: 14px;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.14;
+    letter-spacing: 0.2px;
+    color: #3d3d3d;
+    padding: 2px 8px 2px 8px;
+    margin: 4px 4px 4px 4px;
+    background-color: #ffffff;
+
+    &.secondary {
+      background-color: #eeeeee;
+      border: none;
+    }
+  }
+}
