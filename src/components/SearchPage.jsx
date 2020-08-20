@@ -1,9 +1,11 @@
 import React from 'react'
 import HomeSeachInput from './HomeSearchInput'
 import PillContainer from './PillContainer'
+import ProductModule from './ProductModule'
 import left from 'assets/img/left.svg'
 import 'assets/scss/SearchPage.scss';
 
+import { yourRegulars } from '../data/yourRegulars'
 
 const tags = [
   'fruits', 'gluten free', 'ground beef', 'frozen', 'pizza', 'recipes', 'bread', 'on offers',
@@ -35,7 +37,6 @@ class SearchPage extends React.Component {
   render() {
     const { isFocused, inputText } = this.state
     const { handleBack } = this.props
-
     return (
       <div  className="search__container" >
         <div className="search__top" >
@@ -47,8 +48,18 @@ class SearchPage extends React.Component {
           <span>Add another search</span>
         </div>
         <div className="search__results" >
-          <div className="search_regulars">
-            Your Regulars
+          Your Regulars
+          <div className="search__regulars">
+            {
+              yourRegulars.map(item => (
+                <ProductModule
+                  image={item.image}
+                  title={item.title}
+                  price={item.price}
+                  pricePerUom={item.pricePerUom}
+                />
+              ))
+            }
           </div>
         </div>
       </div>
