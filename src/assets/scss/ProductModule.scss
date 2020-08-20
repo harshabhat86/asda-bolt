@@ -1,0 +1,48 @@
+.product-container {
+
+  &__title {
+    width: 104px;
+    height: 32px;
+    font-family: SourceSansPro;
+    font-size: 14px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.14;
+    letter-spacing: 0.2px;
+    color: #3d3d3d;
+  }
+
+
+  &__price {
+    width: 80px;
+    height: 20px;
+    font-family: SourceSansPro;
+    font-size: 16px;
+    font-weight: 600;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.25;
+    letter-spacing: 0.2px;
+    color: #3d3d3d;
+  }
+
+  &__price-per-uom {
+    width: 80px;
+    height: 13px;
+    font-family: SourceSansPro;
+    font-size: 10px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: 0.08px;
+    color: #767676;
+  }
+
+  &__desc {
+    display: flex;
+    justify-content: space-around;
+  }
+
+}

@@ -27,9 +27,9 @@ class SearchPage extends React.Component {
     const { inputText } = this.state
     return tags.sort((a, b) => b.indexOf(inputText) - a.indexOf(inputText)).slice(0, 8)
   }
-  
+
   addTags = () => {
-    
+
   }
 
   render() {
