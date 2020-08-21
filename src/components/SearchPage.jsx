@@ -21,6 +21,7 @@ class SearchPage extends React.Component {
         'asda', 'greek yogurt', 'bananas', 'Warburtons',
       ],
       selectedTags: [],
+      searchTerm: '',
     }
   }
 
@@ -42,12 +43,10 @@ class SearchPage extends React.Component {
   }
 
   handleFocus = () => {
-    console.log('handleFocus:')
     this.setState({ isFocused: true })
   }
 
   handleUnfocus = () => {
-    console.log('handleUnfocus:')
     this.setState({ isFocused: false })
   }
 
@@ -55,6 +54,14 @@ class SearchPage extends React.Component {
     this.setState({ inputText: event.target.value })
     this.getPills(event.target.value)
   }
+
+  handleKeyUp = (event) => {
+    const { handleShowResults } = this.props
+    if (event.keyCode == 13) {
+      handleShowResults(this.state.inputText)
+      this.setState({ inputText: '', isFocused: false })
+    }
+ }
 
   filterTags = () => {
     const { inputText, tags } = this.state
@@ -74,8 +81,8 @@ class SearchPage extends React.Component {
 
   render() {
     const { isFocused, inputText, selectedTags } = this.state
-    const { handleBack } = this.props
-    const results = this.searchGroceries(inputText)
+    const { handleBack, handleAddToCart, view, searchTerm } = this.props
+    const results = view === 'results' ? this.searchGroceries(searchTerm) : this.searchGroceries(inputText)
     return (
       <div  className="search__container" >
         <div className="search__top" >
@@ -89,29 +96,55 @@ class SearchPage extends React.Component {
                 handleUnfocus={this.handleUnfocus}
                 handleInputClick={this.handleFocus}
                 isSelectedTagsEmpty={!selectedTags.length}
+                handleKeyUp={this.handleKeyUp}
               />
             </SelectedTags>
           </div>
         </div>
-        <PillContainer pills={this.filterTags()} addTag={this.addTag} />
+        {view === 'input' && <PillContainer pills={this.filterTags()} addTag={this.addTag} />}
         <div className="search__middle" >
           <span>Add another search</span>
         </div>
-        <div className="search__results" >
-          Your regulars
-          <div className="search__regulars">
-            {
+        {view === 'input' && (
+          <div className="search__results" >
+            Your regulars
+            <div className="search__regulars">
+              {
+                results.length > 0 && results.map(item => (
+                  <ProductModule
+                    image={item.image}
+                    title={item.title}
+                    price={item.price}
+                    pricePerUom={item.pricePerUom}
+                    handleAddToCart={handleAddToCart}
+                  />
+                ))
+              }
+            </div>
+          </div>
+        )}
+        {view === 'results' && (
+          <div className="search__results">
+            {view === 'results' &&
+              <SelectedTags selectedTags={[searchTerm]}>
+                <button className="tags__plus" >
+                  {'+'}
+                </button>
+              </SelectedTags>
+            }
+            <div className="product-container__wrapper">{
               results.length > 0 && results.map(item => (
                 <ProductModule
                   image={item.image}
                   title={item.title}
                   price={item.price}
                   pricePerUom={item.pricePerUom}
+                  handleAddToCart={handleAddToCart}
                 />
               ))
-            }
-          </div>
+            }</div>
         </div>
+        )}
       </div>
     )
   }

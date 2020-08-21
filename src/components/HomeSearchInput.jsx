@@ -8,10 +8,16 @@ class HomeSearchInput extends React.Component {
     this.textInput = React.createRef();
   }
 
+  handleFocus = () => {
+    const { isFocused } = this.props
+    if (isFocused) {
+      this.textInput.current.focus()
+    }
+  }
+
   componentDidUpdate (prevProps) {
     if (prevProps.isFocused === false && this.props.isFocused === true) {
       this.textInput.current.focus()
-      console.log('hello')
     }
   }
 
@@ -23,19 +29,16 @@ class HomeSearchInput extends React.Component {
   }
 
   componentDidMount() {
-    const { isFocused } = this.props
-    if (isFocused) {
-      this.textInput.current.focus()
-    }
-    document.addEventListener('mousedown', this.handleClickOutside);
+    this.handleFocus()
+    document.addEventListener('mouseup', this.handleClickOutside);
   }
 
   componentWillUnmount() {
-    document.removeEventListener('mousedown', this.handleClickOutside);
+    document.removeEventListener('mouseup', this.handleClickOutside);
   }
 
   render() {
-    const { handleInputClick, isFocused, inputText, handleChange, isSelectedTagsEmpty } = this.props
+    const { handleInputClick, isFocused, inputText, handleChange, handleKeyUp, isSelectedTagsEmpty } = this.props
     return (
       <div className={`input__container ${isFocused && !isSelectedTagsEmpty ? 'inline' : ''}`}>
         {isSelectedTagsEmpty && !inputText && <img className="input__camera" src={camera} />}
@@ -45,9 +48,11 @@ class HomeSearchInput extends React.Component {
           type="text"
           placeholder="Search for items, recipes, offers.."
           onClick={handleInputClick}
+          onBlur={() => { this.handleFocus() }}
           ref={this.textInput}
           value={inputText}
           onChange={handleChange}
+          onKeyUp={handleKeyUp}
         />
       </div>
     )
