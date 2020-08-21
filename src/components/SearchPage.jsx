@@ -7,6 +7,7 @@ import left from 'assets/img/left.svg'
 import 'assets/scss/SearchPage.scss';
 
 import { yourRegulars } from '../data/yourRegulars'
+import { searchTerms } from '../data/searchResults'
 
 class SearchPage extends React.Component {
   constructor(props) {
@@ -20,6 +21,12 @@ class SearchPage extends React.Component {
       ],
       selectedTags: [],
     }
+  }
+
+  searchGroceries = (searchTerm) => {
+    if (!searchTerm) return yourRegulars
+    const val = searchTerms[searchTerm]
+    return val || []
   }
 
   handleFocus = () => {
@@ -55,6 +62,7 @@ class SearchPage extends React.Component {
   render() {
     const { isFocused, inputText, selectedTags } = this.state
     const { handleBack } = this.props
+    const results = this.searchGroceries(inputText)
     return (
       <div  className="search__container" >
         <div className="search__top" >
@@ -80,7 +88,7 @@ class SearchPage extends React.Component {
           Your regulars
           <div className="search__regulars">
             {
-              yourRegulars.map(item => (
+              results.length > 0 && results.map(item => (
                 <ProductModule
                   image={item.image}
                   title={item.title}
