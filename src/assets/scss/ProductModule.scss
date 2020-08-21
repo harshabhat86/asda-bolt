@@ -1,6 +1,10 @@
 .product-container {
   width: 140px;
   padding: 10px;
+  
+  &__wrapper {
+    display: flex;
+  }
 
   &__image-container {
     width: 80px;

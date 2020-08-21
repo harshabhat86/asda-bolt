@@ -16,11 +16,8 @@ class HomeSearchInput extends React.Component {
   }
 
   componentDidUpdate (prevProps) {
-    console.log('prevProps.isFocused:', prevProps.isFocused)
-    console.log('this.props.isFocused:', this.props.isFocused)
     if (prevProps.isFocused === false && this.props.isFocused === true) {
       this.textInput.current.focus()
-      console.log('hello')
     }
   }
 
@@ -41,7 +38,7 @@ class HomeSearchInput extends React.Component {
   }
 
   render() {
-    const { handleInputClick, isFocused, inputText, handleChange, isSelectedTagsEmpty } = this.props
+    const { handleInputClick, isFocused, inputText, handleChange, handleKeyUp, isSelectedTagsEmpty } = this.props
     return (
       <div className={`input__container ${isFocused && !isSelectedTagsEmpty ? 'inline' : ''}`}>
         {isSelectedTagsEmpty && !inputText && <img className="input__camera" src={camera} />}
@@ -55,6 +52,7 @@ class HomeSearchInput extends React.Component {
           ref={this.textInput}
           value={inputText}
           onChange={handleChange}
+          onKeyUp={handleKeyUp}
         />
       </div>
     )

@@ -13,18 +13,22 @@ class App extends React.PureComponent {
   constructor(props) {
     super(props)
     this.state = {
-      isSearchMode: false,
+      view: 'home',
       total: 0,
       cartItems: {},
     }
   }
 
   handleInputClick = () => {
-    this.setState({ isSearchMode: true })
+    this.setState({ view: 'input' })
   }
 
   handleBack = () => {
-    this.setState({ isSearchMode: false })
+    this.setState({  view: 'home' })
+  }
+
+  handleShowResults = (searchTerm) => {
+    this.setState({ view: 'results', searchTerm })
   }
 
   handleAddToCart = (val, image) => {
@@ -38,14 +42,21 @@ class App extends React.PureComponent {
   }
 
   render() {
-    const { isSearchMode, total, cartItems } = this.state
+    const { view, total, cartItems, searchTerm } = this.state
 
     return (
       <BrowserRouter>
         <div className="app">
-          {!isSearchMode && <BookSlot />}
-          {!isSearchMode && <WelcomePage handleInputClick={this.handleInputClick} />}
-          {isSearchMode && <SearchPage handleBack={this.handleBack} handleAddToCart={this.handleAddToCart} />}
+          {view !== 'input' && <BookSlot />}
+          {view === 'home' && <WelcomePage handleInputClick={this.handleInputClick} />}
+          {view !== 'home' && 
+            <SearchPage
+              handleBack={this.handleBack}
+              handleAddToCart={this.handleAddToCart}
+              handleShowResults={this.handleShowResults}
+              view={view}
+              searchTerm={searchTerm}
+            />}
           <Trolley total={total} cartItems={cartItems} />
         </div>
       </BrowserRouter>

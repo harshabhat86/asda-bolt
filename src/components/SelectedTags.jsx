@@ -21,4 +21,7 @@ const SelectedTags = ({ children, selectedTags = [] }) => {
   )
 }
 
-export default SelectedTags
+export {
+  SelectedTags as default,
+  Tags,
+}
