@@ -7,7 +7,7 @@ import info from 'assets/img/info.svg';
 import 'assets/scss/Trolley.scss';
 import { createPriceLabel } from 'util/price'
 
-const Trolley = ({ total, cartItems }) => (
+const Trolley = ({ total, cartItems, handleShowResults }) => (
   total ? (
     <div className="trolley__checkout-container">
       <div className="trolley__items-container">
@@ -43,9 +43,11 @@ const Trolley = ({ total, cartItems }) => (
     <div className="trolley__container">
       <img src={trolley} />
       <div className="trolley__buttons">
-      <img src={one} width="48px" height="48px" />
-          <img src={two} width="48px" height="48px"  />
-          <img src={three} width="48px" height="48px"  />
+      <img src={one} width="48px" height="48px" onClick={() => {
+        handleShowResults('bread')
+      }}/>
+      <img src={two} width="48px" height="48px"  />
+      <img src={three} width="48px" height="48px"  />
       </div>
     </div>
   )

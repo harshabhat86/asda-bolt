@@ -57,7 +57,7 @@ class App extends React.PureComponent {
               view={view}
               searchTerm={searchTerm}
             />}
-          <Trolley total={total} cartItems={cartItems} />
+          <Trolley total={total} cartItems={cartItems} handleShowResults={this.handleShowResults} />
         </div>
       </BrowserRouter>
     );
