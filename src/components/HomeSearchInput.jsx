@@ -8,7 +8,16 @@ class HomeSearchInput extends React.Component {
     this.textInput = React.createRef();
   }
 
+  handleFocus = () => {
+    const { isFocused } = this.props
+    if (isFocused) {
+      this.textInput.current.focus()
+    }
+  }
+
   componentDidUpdate (prevProps) {
+    console.log('prevProps.isFocused:', prevProps.isFocused)
+    console.log('this.props.isFocused:', this.props.isFocused)
     if (prevProps.isFocused === false && this.props.isFocused === true) {
       this.textInput.current.focus()
       console.log('hello')
@@ -23,15 +32,12 @@ class HomeSearchInput extends React.Component {
   }
 
   componentDidMount() {
-    const { isFocused } = this.props
-    if (isFocused) {
-      this.textInput.current.focus()
-    }
-    document.addEventListener('mousedown', this.handleClickOutside);
+    this.handleFocus()
+    document.addEventListener('mouseup', this.handleClickOutside);
   }
 
   componentWillUnmount() {
-    document.removeEventListener('mousedown', this.handleClickOutside);
+    document.removeEventListener('mouseup', this.handleClickOutside);
   }
 
   render() {
@@ -45,6 +51,7 @@ class HomeSearchInput extends React.Component {
           type="text"
           placeholder="Search for items, recipes, offers.."
           onClick={handleInputClick}
+          onBlur={() => { this.handleFocus() }}
           ref={this.textInput}
           value={inputText}
           onChange={handleChange}

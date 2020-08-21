@@ -1,11 +1,11 @@
 .trolley {
   &__container {
     display: flex;
-    padding: 16px 24px 16px 24px;
+    padding: 16px 0 16px 4px;
     width: 100%;
     height: 78px;
     border-radius: 12px;
-    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 20px 0 #0000001a;
     background-color: #ffffff;
     bottom: 0px;
   }
@@ -20,5 +20,106 @@
     display: flex;
     justify-content: space-around;
     width: 100%;
+  }
+
+  &__cart {
+    width: 100%;
+    display: flex;
+  }
+
+  &__checkout-container {
+    display: flex;
+    flex-direction: column;
+    padding: 16px;
+    width: 100%;
+    border-radius: 12px;
+    box-shadow: 0 0 20px 0 #0000001a;
+    background-color: #ffffff;
+    bottom: 0px;
+  }
+  &__checkout {
+    width: 100%;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    border-radius: 20px;
+    border-color: transparent;
+    background-color: #0979b2;
+    margin-top: 16px;
+  }
+  &__checkout-text {
+    height: 23px;
+    width: 100%;
+    font-size: 18px;
+    font-weight: 600;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: 0.2px;
+    text-align: center;
+    color: #ffffff;
+    padding-left: 24px;
+  }
+  &__total {
+    width: 84px;
+    height: 32px;
+    padding: 8px 16px 8px 16px;
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    background-color: #0e5880;
+    font-size: 14px;
+    font-weight: 600;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.14;
+    letter-spacing: 0.2px;
+    text-align: center;
+    color: #ffffff;
+  }
+  &__info {
+    object-fit: contain;
+    padding-left: 8px;
+  }
+
+
+  &__items-container {
+    display: flex;
+  }
+
+  &__cart-item {
+    margin-right: 16px;
+  }
+
+  &__item {
+    position: relative;
+  }
+
+  &__quantity {
+    position: absolute;
+    right: 16px;
+    background-color: #d43030;
+    color: #fff;
+    width: 16px;
+    height: 16px;
+    border-radius: 100%;
+    font-size: 10px;
+    font-weight: 600;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: 0.1px;
+    text-align:center;
+  }
+  &__separator {
+    min-width: 1px;
+    height: 48px;
+    margin-right: 16px;
+    border-radius: 0.5px;
+    background-color: #cccccc;
+  }
+
+  &__add-button {
+    margin-right: 16px;
   }
 }

@@ -74,7 +74,7 @@ class SearchPage extends React.Component {
 
   render() {
     const { isFocused, inputText, selectedTags } = this.state
-    const { handleBack } = this.props
+    const { handleBack, handleAddToCart } = this.props
     const results = this.searchGroceries(inputText)
     return (
       <div  className="search__container" >
@@ -107,6 +107,7 @@ class SearchPage extends React.Component {
                   title={item.title}
                   price={item.price}
                   pricePerUom={item.pricePerUom}
+                  handleAddToCart={handleAddToCart}
                 />
               ))
             }
