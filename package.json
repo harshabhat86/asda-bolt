@@ -27,7 +27,7 @@
     "prettier-write": "prettier --write \"{src,tests}/**/*.{js,jsx,css,scss}\"",
     "prettier-check": "prettier --list-different \"{src,tests}/**/*.{js,jsx,css,scss}\"",
     "start-local": "npm run start-dev",
-    "start": "npm run build && node express.js",
+    "start": "node express.js",
     "start-dev": "webpack-dev-server --config=configs/webpack/dev",
     "start-prod": "npm run build && node express.js",
     "test": "jest --watchAll --coverage --config=configs/jest.json"
