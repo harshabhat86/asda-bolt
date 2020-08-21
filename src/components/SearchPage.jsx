@@ -8,6 +8,7 @@ import 'assets/scss/SearchPage.scss';
 
 import { yourRegulars } from '../data/yourRegulars'
 import { searchTerms } from '../data/searchResults'
+import { tags } from '../data/tagResults'
 
 class SearchPage extends React.Component {
   constructor(props) {
@@ -26,7 +27,18 @@ class SearchPage extends React.Component {
   searchGroceries = (searchTerm) => {
     if (!searchTerm) return yourRegulars
     const val = searchTerms[searchTerm]
-    return val || []
+    return val || yourRegulars
+  }
+
+  getPills = (searchTerm) => {
+    const defaultPills = [
+      'fruits', 'gluten free', 'ground beef', 'frozen', 'pizza', 'recipes', 'bread', 'on offers',
+      'asda', 'greek yogurt', 'bananas', 'Warburtons',
+    ]
+    if (!searchTerm) return defaultPills
+    const val = tags[searchTerm] || defaultPills
+    this.setState({ tags: val })
+
   }
 
   handleFocus = () => {
@@ -41,6 +53,7 @@ class SearchPage extends React.Component {
 
   handleChange = (event) => {
     this.setState({ inputText: event.target.value })
+    this.getPills(event.target.value)
   }
 
   filterTags = () => {
